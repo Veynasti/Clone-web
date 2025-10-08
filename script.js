@@ -1,4 +1,6 @@
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', reveal);
+
+function reveal() {
     const reveals = document.querySelectorAll('.reveal');
     for (let i = 0; i < reveals.length; i++) {
         const windowHeight = window.innerHeight;
@@ -11,4 +13,4 @@ window.addEventListener('scroll', function() {
             reveals[i].classList.remove('active');
         }
     }
-});
+}

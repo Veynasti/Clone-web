@@ -43,6 +43,9 @@ body {
 
 /* Navbar Utama */
 .navbar-utama {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -484,9 +487,9 @@ body {
 }
 
 .reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.6s ease;
+    opacity: 1;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
 }
 .reveal.active {
     opacity: 1;
