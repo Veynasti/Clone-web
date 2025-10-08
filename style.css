@@ -1,4 +1,7 @@
+
+/* navbar atas */
 body {
+    background-color: white;
     margin: 0;
     font-family: Arial, sans-serif;
 }
@@ -36,4 +39,456 @@ body {
     padding: 4px 5px;
     border-radius: 4px;
     border: none;
+}
+
+/* Navbar Utama */
+.navbar-utama {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #12406a;
+    padding: 10px 200px;
+}
+
+.navbar-utama .logo img {
+    height: 40px;
+    padding-block: 20px;
+    margin-left: 90px;
+}
+
+.navbar-utama .menu {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+    margin-right: 22rem;
+}
+
+.navbar-utama .menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+    transition: color 0.5s ease;
+}
+
+.navbar-utama .menu a:hover {
+    color: rgb(243, 194, 104);
+} 
+
+.navbar-utama .menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-utama .menu li {
+    position: relative;
+}
+
+.navbar-utama .menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* muncul di bawah menu */
+    left: 0px;
+    background-color: #2f6087;
+    min-width: 200px;
+    border-radius: 4px;
+    padding: 8px 0px;
+    z-index: 1000;
+}
+
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content a {
+    display: block;
+    color: white;
+    padding: 8px 20px;
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.dropdown-content a:hover {
+    background-color: #1b3d59;
+}
+
+/* Hover effect untuk tampilkan dropdown */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* hero section */
+.quick-links {
+    background-color: #b7c5d0; /* warna abu-abu muda */
+    padding: 0px 0px;
+}
+
+.quick-links-container {
+    display: flex;
+    justify-content: center;  /* rata tengah horizontal */
+    align-items: center; 
+    gap: 20px;               /* jarak antar kolom (atur sesuai lebar layar kamu) */
+    text-align: center;
+    flex-wrap: wrap;          /* biar responsif */
+}
+
+.quick-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    width: 160px;
+    padding: 15px 25px;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    border-radius: 10px;
+}
+
+.icon {
+    background-color: #204e70; /* warna biru lingkaran */
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px; /* ukuran icon */
+    margin-bottom: 10px;
+}
+
+.icon.red {
+    background-color: #7b1c3f; /* warna maroon */
+}
+
+.quick-item p {
+    font-weight: bold;
+    color: #204e70;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.quick-item:hover {
+    background-color: #9fb1bd;
+}
+
+.berita-section {
+    text-align: center;
+    padding: 60px 80px;
+    background-color: #fff;
+}
+
+.berita-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #204e70;
+    position: relative;
+}
+
+.berita-section h2 span {
+    color: #0077c2;
+}
+
+.berita-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.berita-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 280px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.berita-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+.berita-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.berita-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #333;
+    padding: 15px;
+}
+
+.berita-card p {
+    font-size: 0.9rem;
+    color: #666;
+    padding: 0 15px;
+    margin-bottom: 10px;
+}
+
+.berita-card a {
+    font-weight: 400;
+}
+
+.read-more {
+    color: #0077c2;
+    font-weight: 600;
+    padding: 0 15px;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.tanggal {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #888;
+    font-size: 0.8rem;
+    padding: 10px 15px 15px;
+}
+
+.btn-berita {
+    background-color: #2c6da4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 30px;
+    margin-top: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-berita:hover {
+    background-color: #1e517f;
+    transform: scale(1.05);
+}
+
+.profil-section {
+    background-color: #b9c7d2;
+    padding: 60px 80px;
+}
+
+.profil-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.profil-video iframe {
+    border-radius: 12px;
+    width: 500px;
+    height: 280px;
+}
+
+.profil-deskripsi {
+    max-width: 600px;
+    text-align: justify;
+}
+
+.profil-deskripsi h2 {
+    color: #2a6ca3;
+    margin-bottom: 15px;
+}
+
+.profil-deskripsi p {
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.info-section {
+    background-color: #d8e4ed;
+    padding: 40px 60px;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 25px 30px;
+    flex: 1;
+}
+
+.info-card h2 {
+    color: #0073aa;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.info-card a {
+    position: center;
+}
+
+.pengumuman ul {
+    list-style: disc;
+    margin-left: 20px;
+    line-height: 1.7;
+}
+
+.lihat-lainnya {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #0073aa;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.lihat-lainnya:hover {
+    text-decoration: underline;
+}
+
+.prestasi-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    gap: 12px;
+}
+
+.prestasi-item img {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.footer {
+    background-color: #184a77;
+    color: white;
+    padding: 40px 100px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+}
+
+.footer-top {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    width: 500px;
+    margin-bottom: 15px;
+}
+
+.footer-top h2 {
+    font-family: "Dancing Script", cursive;
+    font-size: 28px;
+    font-weight: 500;
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-column h3 {
+    color: #d9b84f;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 10;
+}
+
+.footer-column p,
+.footer-column li {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 5px;
+}
+
+.footer-bottom {
+    background-color: #3b6788; /* warna biru gelap seperti contoh */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 80px;
+    font-size: 14px;
+    color: #e6e6e6;
+    border-top: 1px solid #325b75; /* garis pemisah halus */
+}
+
+.footer-bottom .footer-left p {
+    margin: 0;
+    font-weight: 300; /* font tipis elegan */
+    letter-spacing: 0.5px;
+}
+
+.footer-bottom .footer-right a {
+    color: #e6e6e6;
+    margin-left: 18px;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.footer-bottom .footer-right a:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
